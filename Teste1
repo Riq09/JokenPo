@@ -1,0 +1,61 @@
+from random import randint
+lista = ( 'Pedra', 'Papel', 'Tesoura')
+computador = randint(0, 2)
+
+
+print('-='* 20)
+nome = str(input('''Ola, tudo bem?
+Seja bem vindo ao Joken po 
+criado por = riq
+Digite qualquer seu nome para continuar:   '''))
+print('''Escolha uma dessas opcoes, e veja o resultado, (LEMBRANDO QUE A RESPOSTA DO COMPUTADOR E TOTALMENTE ALEATORIA.)
+[0] - PEDRA 
+[1] - PAPEL
+[2] - TESOURA
+''')
+jogador = int(input('Digite sua opcao: '))
+
+print('{} escolheu {}.'.format(nome, lista[jogador]))
+print('Computador escolheu {}'.format(lista[computador]))
+if computador == 0:
+    if jogador == 0:
+        print('O jogo empatou.')
+    elif jogador == 1:
+        print('''
+        PAPEL AMASSA PEDRA
+        LOGO, O VENCEDOR E {}
+        '''.format(nome))
+    elif jogador == 2:
+        print('''
+        PEDRA ESTRACALHA A TESOURA
+        LOGO, O VENCEDOR E O COMPUTADOR
+        ''')
+if computador == 1:
+    if jogador == 0:
+        print('''
+        O PAPEL AMASSA A PEDRA
+        LOGO, O VENCEDOR E O COMPUTADOR
+        ''')
+    elif jogador == 1:
+        print('O JOGO EMPATOU.')
+    elif jogador == 2:
+        print('''
+        A TESOURA CORTA O PAPEL
+        LOGO, O VENCEDOR E {}
+        '''.format(nome))
+    else:
+        print('JOGADA INVALIDA.')
+if computador == 2:
+    if jogador == 0:
+        print('''
+        PEDRA ESTRACALHA A TESOURA
+        LOGO, O VENCEDOR E O COMPUTADOR.
+        ''')
+    elif jogador == 1:
+        print('''
+        TESOURA CORTA PAPEL
+        LOGO, O VENCEDOR E O COMPUTADOR
+        ''' )
+    elif jogador == 2:
+        print('O JOGO EMPATOU.')
+
